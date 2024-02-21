@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@100;200;400;600;700&display=swap');
+
+:root {
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(209, 34%, 30%);
+    --clr-grey-3: hsl(210, 36%, 96%);
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 86%, 81%);
+    --clr-primary-3: hsl(205, 78%, 60%);
+    --clr-primary-4: hsl(205, 100%, 96%);
+    --clr-primary-5: hsl(205, 90%, 88%);
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --nav-header-color : #fff;
+}
+*,
+html,
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: "Roboto", sans-serif;
+    font-family: "Sans", sans-serif;
+}  
+.body{
+    background-color: var(--clr-grey-3);
+}
+.nav-header{
+    background-color: var(--nav-header-color)
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-header-color);
+    margin: 0 0.8rem;   
+} 
+header{
+    background-color: var(--nav-header-color);
+    box-shadow: var(--light-shadow);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+   padding: 1rem
+}
+.logo h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--clr-grey-2);
+    
+}
+.span_logo{
+    color: var(--clr-primary-3);
+}
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-primary-3);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+.nav-toggle:hover {
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
+  }
+ul{
+    list-style: none;
+   
+}
+.links li {
+    color: var(--clr-grey-2);
+    color: var(--clr-primary-1);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .links li:hover {
+     color: var(--clr-primary-3);
+    padding-left: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .buttons{
+    display: flex;
+   margin-right: 0.5rem;
+
+  }
+ 
+ .links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  } 
+ .show-links {
+    height: 280px;   
+  }  
+
+  @media screen and (min-width: 800px) {
+    header{
+        padding: 0rem;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .show-links{
+        height: 0;
+    }
+    .category_items ul{
+        display: flex;
+       
+        align-items: center;
+    }
+    .links{
+        height: auto;
+    }
+    .links li{
+        padding: 1.5rem 1rem;
+        font-size: 1.2rem;
+      
+    }
+    .links li:hover{
+        background-color: var(--clr-primary-5);
+    }
+  }
+  
+
+.news-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    width: 100%;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    margin: 5.5rem 0rem; 
+    
+}
+
+.card-container{
+    border : 0.5px solid hsla(208, 13%, 74%, 0.346);
+    width: 400px;
+    height: 450px;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: var(--light-shadow);
+
+}
+.card-container:hover{
+    box-shadow: var(--dark-shadow);
+   
+}
+.img-container img{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.info-container{
+    padding: 0rem 0.5rem;
+}
+.title h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+}
+.title_li{
+    list-style: none;
+    background-color: #fff;
+}
+.title_a{
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}
+.title_a:hover{
+    text-decoration: underline;
+}
+h6 {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.source{
+    color: var(--clr-primary-3);
+    font-weight: 500;
+}
+.description{
+    margin-top: 1rem;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .title{
+        font-size: 1.8rem;
+    }
+    .description{
+        font-size: 12px;
+    }
+}
